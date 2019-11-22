@@ -1,0 +1,25 @@
+//- menu-toggle
+// Блок главного меню
+nav.menu-toggle
+  button.menu-toggle__button#mbtn меню
+  div.menu-toggle__block#mainmenu
+    div.before-main-menu
+      button.menu-toggle__close-menu-button#close ← закрыть
+      img.logo(src="img/logo.png", alt="Лого ГТК")
+
+    //- Миксин вставки главного меню 
+    //- либо в главную навигацию (слева), либо на карту сайта (в подвал)
+    mixin pet(param)
+      ul&attributes(attributes)=param
+        // Подключение самого меню
+        include _main-menu.pug
+
+    //- Вызов миксина вставки главного меню    
+    +pet(class="main-menu")
+
+// Конец блока главного меню    
+
+// Вставка скрипта главного меню
+script
+  include _l-menu-toggle.js
+// Конец вставки скрипта главного меню

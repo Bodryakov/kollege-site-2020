@@ -1,0 +1,136 @@
+.menu-toggle
+  // outline: 5px dotted violet
+
+/* Стили кнопки включения меню */
+.menu-toggle__button
+  position: fixed
+  margin: auto
+  margin-left: 1vw
+  margin-top: 1vh
+  padding: auto
+  width: 4.5rem
+  height: 2.2rem
+  text-shadow: $text-glow
+  box-shadow: $text-glow
+  border: 0
+  background-color: $bg-color-transp
+  color: $text
+  font-size: 1.3rem
+  cursor: pointer
+  border-radius: 0.3rem
+  text-align: center
+
+.before-main-menu
+  padding: 1rem
+
+  
+/* Стили кнопки выключения меню */
+.menu-toggle__close-menu-button
+  border: 0
+  border-radius: 0.3rem
+  background-color: $text
+  color: $bg-color
+  width: 11rem
+  height: 2.2rem
+  margin: auto
+  padding: auto
+  font-size: 1.3rem
+
+.logo
+  display: none  
+
+/* Стили блока меню */
+.menu-toggle__block
+  left: -300px
+  background-color: $bg-color-transp
+  top: 0
+  transition: all 1s
+  position: fixed
+  z-index: 20
+  height: 100%
+  overflow-y: auto
+  width: 14rem
+  box-shadow: 0
+  opacity: 0.1
+
+  // background-color: #ccc
+  background-image: url(img-css/clouds.png)
+  background-size: cover
+  background-position: center
+
+.open 
+  left: 0
+  opacity: 1
+  box-shadow: $text-glow
+
+/* Стили самого меню */
+.main-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.main-menu__item 
+  display: block
+  text-align: center
+  border-bottom: solid 1px $text
+  border-top: solid 1px $text
+
+// .main-menu__item:first-child 
+//   border-top: none
+//   padding: 0.5rem
+
+.main-menu__item:last-child 
+  border-bottom: none
+
+.main-menu__item a
+  display: block
+  padding: 8px 5px
+  font-size: 18px
+  font-family: $fb
+  text-decoration: none
+  color: $text
+  text-shadow: $text-glow
+
+.mask 
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 15
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.5)
+
+	/* Конец стилей меню базового размера */
+
+
+/* Медиазапросы стилей меню базового размера */
+
+@media only screen and (min-width: 1200px)
+  .logo
+    display: block
+  .menu-toggle__close-menu-button
+    display: none
+  .menu-toggle__block
+    left: 0  
+    width: 20vw
+    background-color: #ccc
+    background-image: url(img-css/clouds.png)
+    background-size: cover
+    background-position: center
+    opacity: 1
+  .menu-toggle__button
+    display: none
+  .menu-toggle__block li:hover 
+    background-color: $bg-color-transp 
+
+@media only screen and (min-width: 1600px)
+  .menu-toggle__block
+    left: 0  
+    width: 20vw
+    opacity: 1
+  .menu-toggle__button
+    display: none
+  .main-menu__item a
+    padding: 8px 5px
+    font-size: 1rem
+

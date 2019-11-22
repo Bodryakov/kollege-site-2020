@@ -1,0 +1,77 @@
+
+
+//.menu
+.menu-social__button
+  utline: 2px solid red
+  z-index: 999
+  position: absolute
+  bottom: 2vh
+  right: 1vw
+  width: 4rem
+  height: 2.2rem
+  text-align: center
+  padding: 0.2rem
+  border-radius: 0.2rem
+  background-color: $bg-color-transp
+  text-shadow: $text-glow
+  box-shadow: $text-glow
+  cursor: pointer
+
+.menu-social__button__caption
+  utline: 2px solid blue
+  text-align: center
+  font-weight: bold
+  line-height: 0.9rem
+  
+.menu-social__button:hover
+  .menu-social__menu-block li
+    &:nth-child(1)
+      opacity: 1
+      top: -2.5rem
+      transition-delay: 0.1s
+    &:nth-child(2)
+      opacity: 1
+      top: -4.8rem
+      transition-delay: 0.2s
+    &:nth-child(3)
+      opacity: 1
+      top: -7.1rem
+      transition-delay: 0.3s
+    &:nth-child(4)
+      opacity: 1
+      top: -9.4rem
+      transition-delay: 0.4s
+    &:nth-child(5)
+      opacity: 1
+      top: -188px
+      transition-delay: 0.5s
+
+.menu-social__menu-block
+  list-style-type: none
+  li
+    transition: all ease-in-out 0.5s
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    padding: 0.5rem
+    z-index: -1
+    opacity: 0
+    width: 4rem
+    height: 2.2rem
+    border-radius: 0.2rem
+    background-color: $bg-color-transp
+    a
+      color: $text
+
+.menu-social__menu-block li:hover        
+  &.facebook
+    background-color: #3b5999
+  &.twitter
+    background-color: #55acee
+  &.googlePlus
+    background-color: #dd4b39
+  &.instagram
+    background-color: #e4405f
